@@ -9,7 +9,7 @@ app.use(express.static('public'));
 
 // Definir la ruta para la página principal
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'views', 'indexback.html'));
+  res.sendFile(path.join(__dirname, 'views', 'index.html'));
 });
 
 // Ruta para generar la respuesta
