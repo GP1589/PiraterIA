@@ -1,0 +1,66 @@
+<!-- <!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Reconocimiento de Voz a Texto</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <h1>Reconocimiento de Voz a Texto</h1>
+  
+  <button id="start-btn">Iniciar</button>
+  
+  <div id="result-container"></div>
+
+
+
+  <h1>Ingresar prompt:</h1>
+    <form action="/" method="POST">
+      <input type="text" name="prompt" placeholder="Ingrese su prompt" required>
+      <button type="submit">Enviar</button>
+    </form>
+    <h2>Respuesta generada:</h2>
+    <p id="respuesta"></p>
+  
+  <script src="js/scripts.js"></script>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Chatbot con OpenAI</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <h1>Reconocimiento de Voz a Texto</h1>
+  <button id="start-btn">Iniciar</button>
+  <div id="result-container"></div>
+
+
+  <!-- <h1>Chatbot con OpenAI</h1>
+  <input type="text" id="inputText" placeholder="Escribe tu pregunta" />
+  <button onclick="generateResponse()">Enviar</button> -->
+  <h4 id="response"></h4>
+
+  <!-- <script>
+    async function generateResponse() {
+      const inputText = document.getElementById('inputText').value;
+
+      const response = await fetch('/generate', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ prompt: inputText }),
+      });
+
+      const { answer } = await response.json();
+      document.getElementById('response').textContent = answer;
+    }
+  </script> -->
+  <script src="js/scripts.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
+
