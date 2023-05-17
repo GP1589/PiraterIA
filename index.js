@@ -2,27 +2,14 @@ const express = require('express');
 const app = express();
 const port = 3000;
 const path = require('path');
-
-const { Configuration, OpenAIApi } = require('openai');
-
-// Configura tu clave de API de OpenAI
-const apiKey = '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';
-const model = 'text-davinci-003';
-
-// Crea una instancia de configuración
-const configuration = new Configuration({
-  apiKey: apiKey,
-});
-
-// Crea una instancia de la API de OpenAI
-const openai = new OpenAIApi(configuration);
+const { openai, model } = require('./openaiConfig');
 
 app.use(express.json());
 app.use(express.static('public'));
 
 // Definir la ruta para la página principal
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'views', 'index.html'));
+  res.sendFile(path.join(__dirname, 'views', 'indexback.html'));
 });
 
 // Ruta para generar la respuesta
