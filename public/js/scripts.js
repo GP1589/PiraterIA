@@ -7,8 +7,8 @@ recognition.lang = 'es-PE';
 function speak(sentence) {
   const text_speak = new SpeechSynthesisUtterance(sentence);
   text_speak.volume=1;
-  text_speak.rate = 0.9;
-  text_speak.pitch = 1.5;
+  text_speak.rate = 1;
+  text_speak.pitch = 1;
 
   image.src = 'img/anim.gif';
 
@@ -42,17 +42,17 @@ recognition.onstart = function() {
   // document.getElementById('result-container').textContent = 'Escuchando...';
   content.textContent = 'Escuchando...';
 };
-//Definir acciones cuando se detiene el reconocimiento
-recognition.onend = function(event) {
-  isSpeaking = false;
-  // Check if there are any pending utterances
-  if (!window.speechSynthesis.speaking) {
-    // Restore the image source after all utterances are completed
-    image.src = 'img/static.png';
-    // Remove the CSS class to stop the transition effect
-    image.classList.remove('transitioning');
-  }
-};
+// //Definir acciones cuando se detiene el reconocimiento
+// recognition.onend = function(event) {
+//   isSpeaking = false;
+//   // Check if there are any pending utterances
+//   if (!window.speechSynthesis.speaking) {
+//     // Restore the image source after all utterances are completed
+//     image.src = 'img/static.png';
+//     // Remove the CSS class to stop the transition effect
+//     image.classList.remove('transitioning');
+//   }
+// };
 
 
 // Definir acciones cuando se obtiene un resultado del reconocimiento
@@ -69,13 +69,13 @@ recognition.onresult = function(event) {
 };
 
 // Delay changing the image source to allow time for the transition effect
-setTimeout(() => {
-  // Set opacity to 0 to fade out the current image
-  image.style.opacity = 0;
-  image.src = 'img/anim.gif';
-  // Set opacity to 1 to fade in the new image
-  image.style.opacity = 1;
-}, 300);
+// setTimeout(() => {
+//   // Set opacity to 0 to fade out the current image
+//   image.style.opacity = 0;
+//   image.src = 'img/anim.gif';
+//   // Set opacity to 1 to fade in the new image
+//   image.style.opacity = 1;
+// }, 300);
 
 // Asociar eventos a los botones de inicio y detención
 document.getElementById('start-btn').addEventListener('click', function() {

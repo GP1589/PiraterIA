@@ -20,7 +20,7 @@ app.post('/generate', async (req, res) => {
     const completion = await openai.createCompletion({
       model: model,
       prompt:prompt,
-      max_tokens: 50,
+      max_tokens: 50,//256
       temperature: 1,
     });
 
