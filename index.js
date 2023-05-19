@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 const path = require('path');
 const { openai, model } = require('./openaiConfig');
 
@@ -19,8 +19,8 @@ app.post('/generate', async (req, res) => {
 
     const completion = await openai.createCompletion({
       model: model,
-      prompt:prompt,
-      max_tokens: 50,
+      prompt:'responde como pirata, ${prompt}',
+      max_tokens: 100,//256
       temperature: 1,
     });
 
