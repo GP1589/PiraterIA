@@ -21,6 +21,10 @@
 
 .main .image-container {
   padding: 10px;
+  display: flex;
+  flex-direction: column;
+  width: inherit;
+  align-items: center;
 }
 
 .main .image-container .image {
@@ -55,7 +59,8 @@
   width: 40vw;
   height: 50px;
   border-radius: 20px;
-  background: rgba(64, 96, 97, 0.5);
+  background: rgba(64, 96, 97, 0.2);
+  min-width: 280px;
 }
 
 .main .input .talk {
@@ -75,42 +80,73 @@
   font-size: 20px;
   color: #aed0d0;
 }
-
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
 .main .input .content {
   color: #aed0d0;
   font-size: 15px;
   margin-right: 20px;
+  animation: typing 0.8s steps(40, end);
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
 }
 @keyframes bounce {
   0% {
-      transform: translateY(0);
+    transform: translateY(0);
   }
   50% {
-      transform: translateY(-20px);
+    transform: translateY(-20px);
   }
   100% {
-      transform: translateY(0);
+    transform: translateY(0);
   }
 }
 
 @keyframes bounce2 {
   0% {
-    transform: translate(-50%, -50%) perspective(300px) skew(0deg, 0deg) scale(1, 0.2);
+    transform: translate(-50%, -50%) perspective(300px) skew(0deg, 0deg)
+      scale(1, 0.2);
     width: 10%;
     padding-bottom: 10%;
   }
   50% {
-    transform: translate(-50%, -40%) perspective(300px) skew(0deg, 0deg) scale(1, 0.3);
+    transform: translate(-50%, -40%) perspective(300px) skew(0deg, 0deg)
+      scale(1, 0.3);
     width: 20%;
     padding-bottom: 20%;
   }
   100% {
-    transform: translate(-50%, -50%) perspective(300px) skew(0deg, 0deg) scale(1, 0.2);
+    transform: translate(-50%, -50%) perspective(300px) skew(0deg, 0deg)
+      scale(1, 0.2);
     width: 10%;
     padding-bottom: 10%;
   }
 }
 
+@keyframes bounce3 {
+  0% {
+    transform: translate(-50%, -50%) perspective(300px) skew(0deg, 0deg)
+      scale(1, 0.2);
+    width: 5%;
+    padding-bottom: 10%;
+  }
+  50% {
+    transform: translate(-50%, -40%) perspective(300px) skew(0deg, 0deg)
+      scale(1, 0.3);
+    width: 10%;
+    padding-bottom: 20%;
+  }
+  100% {
+    transform: translate(-50%, -50%) perspective(300px) skew(0deg, 0deg)
+      scale(1, 0.2);
+    width: 5%;
+    padding-bottom: 10%;
+  }
+}
 
 .image {
   position: relative;
@@ -139,20 +175,60 @@
   z-index: 0;
   top: 80%;
   left: 50%;
-  transform: translate(-50%, -50%) perspective(300px) skew(0deg, 0deg) scale(1, 0.2);
+  transform: translate(-50%, -50%) perspective(300px) skew(0deg, 0deg)
+    scale(1, 0.2);
   width: 10%;
   padding-bottom: 10%;
   border-radius: 50%;
-  background: rgba(128, 46, 183, 0.3);
-  box-shadow: 0 5px 20px rgba(104, 88, 107, 0.3);
+  background: rgba(128, 46, 183, 0.1);
+  box-shadow: 0 5px 20px rgba(104, 88, 107, 0.1);
   animation: bounce2 3s infinite;
 }
 #myImage.transitioning {
   transition: opacity 3s ease-in-out;
 }
 
-h1{
-  background: linear-gradient(270deg,#3f5efb,#fc466b);
+h1 {
+  background: linear-gradient(270deg, #3f5efb, #fc466b);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+#logos img {
+  width: 100px;
+  opacity: 0.3;
+}
+@media (max-width: 600px) {
+  #logos img {
+    width: 50px;
+  }
+}
+#small {
+  display: flex;
+  margin-inline: 3rem;
+  text-align: center;
+  max-width: 520px;
+}
+.bot {
+  display: flex;
+  justify-content: space-between;
+  margin-inline: 2rem;
+}
+@media (min-width:600px) {
+  .image::before {
+    animation: bounce3 3s infinite;
+  }
+}
+
+.scrollable-div {
+  overflow: auto; /* Enable both vertical and horizontal scrolling */
+  white-space: nowrap; /* Prevent line breaks */
+  width: 100%; /* Set width to fill parent container */
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+  -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
+  justify-content: end;
+  text-align: left; /* Left-align the text */
+}
+
+.scrollable-div::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Chrome and Safari */
 }
