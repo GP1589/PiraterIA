@@ -28,7 +28,7 @@
         id="logos"
         class="position-absolute"
         style="color: #00bcd4; top: 2%; left: 2%">
-        <img src="img/usil-logo-2CFAC94BA9-seeklogo.com.png" alt="" />
+        <img src="img/usil-logo-2CFAC94BA9-seeklogo.com.png" alt="" style="margin-right: 1rem;" />
         <img src="img/cropped-cs-favicon-512x512.webp" alt="" />
       </div>
       <!-- MAIN -->
@@ -53,15 +53,16 @@
         <!-- FATHER BOX -->
         <div
           class="input scrollable-div p-2 mx-3"
-          style="max-width: 70vw; height: 30vh">
+          style="max-width: 80vw; height: 30vh"
+          id="father">
           <div 
           class="d-flex flex-column justify-content-center align-items-center"
-          style="cursor:pointer;margin-left: 1.5rem;"
+          style="cursor:pointer;margin-left: 1.5rem;min-width: 20vw;"
           id="start-btn">
             <button class="talk mx-2">
               <i class="fas fa-microphone-alt"></i>
             </button>
-            <div style="max-width: 300px;display: flex;">
+            <div style="max-width: 300px;display: flex;" id="transcript">
               <p
                 class="content mb-0"
                 style="max-width: 700px; white-space: inherit; opacity: 0.8">
@@ -72,7 +73,7 @@
           <!-- ANSWERS -->
           <div
             class="input scrollable-div p-2 mx-3 mt-2 justify-content-center align-items-center"
-            style="height: 25vh;">
+            style="height: 25vh;max-width: 70%;">
             <h1
               class="content mb-0"
               style="
@@ -81,7 +82,8 @@
                 margin: 0;
                 padding: 0.5rem;
                 max-height: 200px;
-              ">
+              "
+              id="response">
               Ahoy marinero!...Soy el bastardo pirata de ChatGPT, como puedo
               ayudarte?
             </h1>

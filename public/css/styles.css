@@ -198,11 +198,6 @@ h1 {
   width: 100px;
   opacity: 0.3;
 }
-@media (max-width: 600px) {
-  #logos img {
-    width: 50px;
-  }
-}
 #small {
   display: flex;
   margin-inline: 3rem;
@@ -245,4 +240,67 @@ footer {
 #start-btn:hover i {
   transform: scale(1.5);
   color: #fc466b;
+}
+
+#start-btn i.tinkling {
+  animation: tinkling-animation 3s infinite alternate;
+  color: #fc466b;
+}
+
+@keyframes tinkling-animation {
+  from {
+    transform: scale(0.5);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+/* Mobile View medias */
+@media (max-width: 580px) {
+  #logos img {
+    width: 50px!important;
+  }
+  #myImage{
+    width: 290px!important;
+  }
+  .image-container #neon{
+    margin-block: 0.5rem!important;
+    font-size: 25px;
+  }
+  /* Father Box */
+  #father{
+    max-width: 90vw!important;
+    height: 40vh!important;
+    flex-direction: column!important;
+  }
+  #start-btn{
+    margin-left: 0!important;
+  }
+  #transcript{
+    display: none!important;
+  }
+  #father :nth-child(2){
+    height: 100%!important;
+    margin-top: 0!important;
+    margin-left: 0.2rem!important;
+    margin-right: 0.2rem!important;
+    max-width: 100%!important;
+    overflow: scroll;
+  }
+  #father :nth-child(2) h1{
+    font-size: 15px;
+    overflow: auto;
+  }
+  .bot{
+    margin-inline: 1rem!important;
+    justify-content: space-between;
+  }
+  .bot h6{
+    font-size: 12px;
+    margin-bottom: 0;
+  }
+  .bot :nth-child(2){
+    text-align: end;
+  }
 }
