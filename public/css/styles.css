@@ -9,8 +9,8 @@
 }
 
 .main {
-  min-height: 95vh;
-  position: relative;
+  /* min-height: 95vh; */
+  /* position: relative; */
   width: 100%;
   /* background: #000; */
   display: flex;
@@ -21,6 +21,10 @@
 
 .main .image-container {
   padding: 10px;
+  display: flex;
+  flex-direction: column;
+  width: inherit;
+  align-items: center;
 }
 
 .main .image-container .image {
@@ -50,12 +54,14 @@
 
 .main .input {
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
-  width: 40vw;
-  height: 50px;
+  /* width: 40vw; */
+  /* height: 50px; */
   border-radius: 20px;
-  background: rgba(64, 96, 97, 0.5);
+  background: rgba(64, 96, 97, 0.2);
+  min-width: 280px;
+  padding: 0.5rem;
 }
 
 .main .input .talk {
@@ -75,42 +81,73 @@
   font-size: 20px;
   color: #aed0d0;
 }
-
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
 .main .input .content {
   color: #aed0d0;
   font-size: 15px;
   margin-right: 20px;
+  animation: typing 0.8s steps(40, end);
+  /* overflow: hidden; */
+  white-space: nowrap;
+  width: 100%;
 }
 @keyframes bounce {
   0% {
-      transform: translateY(0);
+    transform: translateY(0);
   }
   50% {
-      transform: translateY(-20px);
+    transform: translateY(-20px);
   }
   100% {
-      transform: translateY(0);
+    transform: translateY(0);
   }
 }
 
 @keyframes bounce2 {
   0% {
-    transform: translate(-50%, -50%) perspective(300px) skew(0deg, 0deg) scale(1, 0.2);
+    transform: translate(-50%, -50%) perspective(300px) skew(0deg, 0deg)
+      scale(1, 0.2);
     width: 10%;
     padding-bottom: 10%;
   }
   50% {
-    transform: translate(-50%, -40%) perspective(300px) skew(0deg, 0deg) scale(1, 0.3);
+    transform: translate(-50%, -40%) perspective(300px) skew(0deg, 0deg)
+      scale(1, 0.3);
     width: 20%;
     padding-bottom: 20%;
   }
   100% {
-    transform: translate(-50%, -50%) perspective(300px) skew(0deg, 0deg) scale(1, 0.2);
+    transform: translate(-50%, -50%) perspective(300px) skew(0deg, 0deg)
+      scale(1, 0.2);
     width: 10%;
     padding-bottom: 10%;
   }
 }
 
+@keyframes bounce3 {
+  0% {
+    transform: translate(-50%, -50%) perspective(300px) skew(0deg, 0deg)
+      scale(1, 0.2);
+    width: 5%;
+    padding-bottom: 10%;
+  }
+  50% {
+    transform: translate(-50%, -40%) perspective(300px) skew(0deg, 0deg)
+      scale(1, 0.3);
+    width: 10%;
+    padding-bottom: 20%;
+  }
+  100% {
+    transform: translate(-50%, -50%) perspective(300px) skew(0deg, 0deg)
+      scale(1, 0.2);
+    width: 5%;
+    padding-bottom: 10%;
+  }
+}
 
 .image {
   position: relative;
@@ -139,20 +176,131 @@
   z-index: 0;
   top: 80%;
   left: 50%;
-  transform: translate(-50%, -50%) perspective(300px) skew(0deg, 0deg) scale(1, 0.2);
+  transform: translate(-50%, -50%) perspective(300px) skew(0deg, 0deg)
+    scale(1, 0.2);
   width: 10%;
   padding-bottom: 10%;
   border-radius: 50%;
-  background: rgba(128, 46, 183, 0.3);
-  box-shadow: 0 5px 20px rgba(104, 88, 107, 0.3);
+  background: rgba(128, 46, 183, 0.1);
+  box-shadow: 0 5px 20px rgba(104, 88, 107, 0.1);
   animation: bounce2 3s infinite;
 }
 #myImage.transitioning {
   transition: opacity 3s ease-in-out;
 }
 
-h1{
-  background: linear-gradient(270deg,#3f5efb,#fc466b);
+h1 {
+  background: linear-gradient(270deg, #3f5efb, #fc466b);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+#logos img {
+  width: 100px;
+  opacity: 0.3;
+}
+#small {
+  display: flex;
+  margin-inline: 3rem;
+  text-align: center;
+  max-width: 520px;
+}
+.bot {
+  display: flex;
+  justify-content: space-between;
+  margin-inline: 2rem;
+}
+@media (min-width: 600px) {
+  .image::before {
+    animation: bounce3 3s infinite;
+  }
+}
+
+.scrollable-div {
+  /* overflow: auto; Enable both vertical and horizontal scrolling */
+  /* white-space: nowrap; Prevent line breaks */
+  /* width: 100%; Set width to fill parent container */
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+  -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
+  /* justify-content: end; */
+  /* text-align: left; Left-align the text */
+}
+
+.scrollable-div::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Chrome and Safari */
+}
+footer {
+  position: absolute;
+  bottom: 2%;
+  width: 100%;
+}
+
+#start-btn i{
+  transition: transform 0.3s ease, color 0.3s ease;;
+}
+#start-btn:hover i {
+  transform: scale(1.5);
+  color: #fc466b;
+}
+
+#start-btn i.tinkling {
+  animation: tinkling-animation 3s infinite alternate;
+  color: #fc466b;
+}
+
+@keyframes tinkling-animation {
+  from {
+    transform: scale(0.5);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+/* Mobile View medias */
+@media (max-width: 580px) {
+  #logos img {
+    width: 50px!important;
+  }
+  #myImage{
+    width: 290px!important;
+  }
+  .image-container #neon{
+    margin-block: 0.5rem!important;
+    font-size: 25px;
+  }
+  /* Father Box */
+  #father{
+    max-width: 90vw!important;
+    height: 40vh!important;
+    flex-direction: column!important;
+  }
+  #start-btn{
+    margin-left: 0!important;
+  }
+  #transcript{
+    display: none!important;
+  }
+  #father :nth-child(2){
+    height: 100%!important;
+    margin-top: 0!important;
+    margin-left: 0.2rem!important;
+    margin-right: 0.2rem!important;
+    max-width: 100%!important;
+    overflow: scroll;
+  }
+  #father :nth-child(2) h1{
+    font-size: 15px;
+    overflow: auto;
+  }
+  .bot{
+    margin-inline: 1rem!important;
+    justify-content: space-between;
+  }
+  .bot h6{
+    font-size: 12px;
+    margin-bottom: 0;
+  }
+  .bot :nth-child(2){
+    text-align: end;
+  }
 }
