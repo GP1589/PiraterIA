@@ -21,42 +21,82 @@
     />
   </head>
 
-  <body style="background-color: black;width: 100%;height: 100%;display: flex;flex-direction: column;">
-    <section class="main">
-      <div id="logos"class="position-absolute" style="color: #00bcd4; top: 2%; left: 2%">
-        <img src="img/usil-logo-2CFAC94BA9-seeklogo.com.png" alt="">
-        <img src="img/cropped-cs-favicon-512x512.webp" alt="">
+  <body style="background-color: black; width: 100%; height: 100%">
+    <section class="main" style="height: 100vh">
+      <!-- LOGOS -->
+      <div
+        id="logos"
+        class="position-absolute"
+        style="color: #00bcd4; top: 2%; left: 2%">
+        <img src="img/usil-logo-2CFAC94BA9-seeklogo.com.png" alt="" />
+        <img src="img/cropped-cs-favicon-512x512.webp" alt="" />
       </div>
-      <div class="image-container">
-        <div class="image">
-          <img id="myImage" src="img/static.png" alt="image" style="width: 470px">
+      <!-- MAIN -->
+      <div
+        class="d-flex flex-column align-items-center justify-content-center"
+        style="height: 100%; width: 100%">
+        <div class="image-container">
+          <div class="image">
+            <img
+              id="myImage"
+              src="img/static.png"
+              alt="image"
+              style="width: 470px"
+            />
+          </div>
+          <h1 id="neon" style="font-weight: 700;margin-block: 2rem;">P I R A T E R - IA</h1>
+          <!-- <div id="small">
+            Ahoy marinero!...Soy el bastardo pirata de ChatGPT, como puedo
+            ayudarte?
+          </div> -->
         </div>
-        <h1 id="neon" style="font-weight: 700;">PIRATER-IA</h1>
-        <div id="small">
-          Ahoy marinero!...Soy el bastardo pirata de ChatGPT, como puedo ayudarte?
+        <!-- FATHER BOX -->
+        <div
+          class="input scrollable-div p-2 mx-3"
+          style="max-width: 70vw; height: 30vh">
+          <div 
+          class="d-flex flex-column justify-content-center align-items-center"
+          style="cursor:pointer;margin-left: 1.5rem;"
+          id="start-btn">
+            <button class="talk mx-2">
+              <i class="fas fa-microphone-alt"></i>
+            </button>
+            <div style="max-width: 300px;display: flex;">
+              <p
+                class="content mb-0"
+                style="max-width: 700px; white-space: inherit; opacity: 0.8">
+                Click aqui para conversar
+              <p/>
+            </div>
+          </div>
+          <!-- ANSWERS -->
+          <div
+            class="input scrollable-div p-2 mx-3 mt-2 justify-content-center align-items-center"
+            style="height: 25vh;">
+            <h1
+              class="content mb-0"
+              style="
+                max-width: 90%;
+                white-space: inherit;
+                margin: 0;
+                padding: 0.5rem;
+                max-height: 200px;
+              ">
+              Ahoy marinero!...Soy el bastardo pirata de ChatGPT, como puedo
+              ayudarte?
+            </h1>
+          </div>
         </div>
       </div>
-      <div class="input scrollable-div">
-        <button class="talk" id="start-btn"><i class="fas
-        fa-microphone-alt"></i></button>
-        <div>
-          <h1 class="content mb-0">Click here to speak</h1>
-        </div>
-      </div>
-      
     </section>
-    <div class="bot">
-        <h6>
-            <a>Miguelangel Garay </a>-<a> Christian Castro</a>
-          </h6>
-          <h6>
-            powered by ChatGPT
-          </h6>
-    </div>
+    <footer>
+      <div class="bot">
+        <h6><a>Miguelangel Garay </a>-<a> Christian Castro</a></h6>
+        <h6>powered by ChatGPT</h6>
+      </div>
+    </footer>
     <!------- Js Linkage --------->
     <!-- <script src="js/app.js"></script> -->
     <script src="js/scripts.js"></script>
   </body>
 </html>
-
-
