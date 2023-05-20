@@ -1,9 +1,9 @@
-# fly.toml app configuration file generated for pirater-ia on 2023-05-19T09:34:40-05:00
+# fly.toml app configuration file generated for wild-moon-2912 on 2023-05-19T13:00:49-05:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = "pirater-ia"
+app = "wild-moon-2912"
 primary_region = "scl"
 
 [http_service]

@@ -81,7 +81,7 @@ recognition.onresult = function(event) {
 document.getElementById('start-btn').addEventListener('click', function() {
   recognition.start();
 });
-
+//const responsev ="";
 async function generateResponse(prompt) {
   const response = await fetch('/generate', {
     method: 'POST',
@@ -92,5 +92,7 @@ async function generateResponse(prompt) {
   });
   const { answer } = await response.json();
   // document.getElementById('response').textContent = answer;
+  //responsev=answer;
   speak(answer);
+
 }
