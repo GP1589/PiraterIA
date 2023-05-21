@@ -216,7 +216,7 @@ h1 {
 }
 
 .scrollable-div {
-  /* overflow: auto; Enable both vertical and horizontal scrolling */
+  overflow: auto; /*Enable both vertical and horizontal scrolling */
   /* white-space: nowrap; Prevent line breaks */
   /* width: 100%; Set width to fill parent container */
   scrollbar-width: none; /* Hide scrollbar for Firefox */
@@ -229,8 +229,8 @@ h1 {
   display: none; /* Hide scrollbar for Chrome and Safari */
 }
 footer {
-  position: absolute;
-  bottom: 2%;
+  /* position: absolute;
+  bottom: 2%; */
   width: 100%;
 }
 
@@ -271,7 +271,7 @@ footer {
   /* Father Box */
   #father{
     max-width: 90vw!important;
-    height: 40vh!important;
+    height: 52vh!important;
     flex-direction: column!important;
   }
   #start-btn{
@@ -302,5 +302,14 @@ footer {
   }
   .bot :nth-child(2){
     text-align: end;
+  }
+  #response{
+    max-width: 100%!important;
+    /* max-height: 200px; */
+  }
+}
+@media (min-width:1100) {
+  #response{
+    max-width: 90%!important;
   }
 }
