@@ -17,15 +17,19 @@ app.post('/generate', async (req, res) => {
   try {
     const { prompt } = req.body;
 
-    const completion = await openai.createCompletion({
-      model: model,
-      prompt:'responde como pirata, ${prompt}',
-      max_tokens: 50,//256
-      temperature: 1,
+    // const completion = await openai.createCompletion({
+    //   model: model,
+    //   prompt:'responde en español, ${prompt}',
+    //   max_tokens: 512,//256
+    //   temperature: 1,
+    // });
+
+    const completion = await openai.createChatCompletion({
+      model: "gpt-3.5-turbo",
+      messages: [{role: "user", content: prompt }],
     });
-
-    const answer = completion.data.choices[0].text;
-
+    const answer = completion.data.choices[0].message.content;
+    console.log(completion.data.choices[0].message);
     res.json({ answer });
   } catch (error) {
     console.error('Error al generar la respuesta:', error);

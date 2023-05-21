@@ -304,3 +304,14 @@ footer {
     text-align: end;
   }
 }
+
+
+.mi-caja {
+  overflow: auto;
+  -ms-overflow-style: none; /* IE 10+ */
+  scrollbar-width: none; /* Firefox */
+}
+
+.mi-caja::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
