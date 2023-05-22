@@ -1,6 +1,8 @@
-
 # PiraterIA NodeJS 📝  
-gg 
+Hello Usil 2023 - Computer Society \
+Realizado por: \
+-Christian Castro Ortiz \
+-Miguel Angel Garay Dueñas 
 
 ## Get Started 🚀  
 To make it work just rename openaiConfig.js.example \
@@ -13,10 +15,10 @@ with your OpenAI API_KEY
 3. an install express an openai with  "npm install express openai" \
 4. add "start":"node index.js" on "script" in the package.json file for it to deploy correctly
 
-## Prebuilt Components/Templates 🔥  
+<!-- ## Prebuilt Components/Templates 🔥  
 You can checkout prebuilt components and templates by clicking on the menu icon
 on the top left corner of the navbar.
     
 ## Save Readme ✨  
 Once you're done, click on the save button to directly save your Readme to your
-project's root directory!
+project's root directory! -->

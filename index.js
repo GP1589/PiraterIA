@@ -27,6 +27,8 @@ app.post('/generate', async (req, res) => {
     const completion = await openai.createChatCompletion({
       model: "gpt-3.5-turbo",
       messages: [{role: "user", content: prompt }],
+      max_tokens:256,
+      temperature:1,
     });
     const answer = completion.data.choices[0].message.content;
     console.log(completion.data.choices[0].message);

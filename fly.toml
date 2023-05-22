@@ -1,9 +1,9 @@
-# fly.toml app configuration file generated for wild-moon-2912 on 2023-05-19T13:00:49-05:00
+# fly.toml app configuration file generated for wandering-morning-8704 on 2023-05-22T17:30:33-05:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = "wild-moon-2912"
+app = "wandering-morning-8704"
 primary_region = "scl"
 
 [http_service]
