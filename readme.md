@@ -1,5 +1,5 @@
 # PiraterIA NodeJS 📝  
-Hello Usil 2023 - Computer Society \
+Hello Usil 2023 - Computer Society USIL \
 Realizado por: \
 -Christian Castro Ortiz \
 -Miguel Angel Garay Dueñas 
